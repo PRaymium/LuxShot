@@ -1,0 +1,245 @@
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    background-color: #D4E6F1;
+    display: flex;
+    justify-content: center;
+}
+
+.global-wrapper{
+    height: 100%;
+    width: 100%;
+    max-width: 1920px;
+}
+
+header{
+    background-color: #709FCB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-wrapper{
+    width: 96%;
+    margin: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 15px 0px;
+}
+
+.logo{
+    font-size: 5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 7px 7px 0px rgba(0,0,0,0.3);
+    transition: .1s ease-in-out;
+}
+
+.logo:hover{
+    transform: translateX(3px) translateY(3px);
+    text-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.button-block{
+    display: flex;
+    align-items: center;
+}
+
+.header-button{
+    font-size: 3em;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    color: #709FCB;
+    padding: 0px 20px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    transition: .1s ease-in-out;
+}
+
+.header-button:hover{
+    transform: translateX(3px) translateY(3px);
+    box-shadow: none;
+}
+
+.header-button:active{
+    transform: translateX(6px) translateY(6px);
+    box-shadow: inset 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+main{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #709FCB;
+}
+
+.main-wrapper{
+    width: 96%;
+    margin: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.screenshoot-block{
+    width: 320px;
+    height: 180px;
+    box-sizing: border-box;
+    background-color: #b4cedf;
+    border: 7px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    font-size: 3em;
+    font-weight: 700;
+    color: #99b7ca;
+    justify-content:center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upload-block{
+    box-sizing: border-box;
+    height: 600px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 5em;
+    border: 7px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.upload-block:hover{
+    border: 7px solid #709FCB;
+}
+
+.upload-block-image{
+    width: 600px;
+}
+
+.upload-text{
+    margin: 0;
+    color: #709FCB;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.center-side_bottom-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer{
+    height: 100px;
+    background-color: darkgrey;
+}
+
+
+
+@media screen and (max-width: 1770px)
+{
+    .main-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .center-side{
+        order: -1;
+    }   
+
+    .upload-block-image
+    {
+        margin-top: 20px;
+    }
+
+    .upload-block{
+        height: inherit;
+    }
+
+    .upload-text{
+        margin: 30px 0px;
+    }
+
+    .left-side{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1010px;
+    }
+
+    .right-side{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1010px;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    body
+    {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1050px)
+{
+    body
+    {
+        font-size: 1vw;
+    }
+
+    .center-side
+    {
+        width: 100%;
+    }
+
+    .upload-block{
+        width: inherit;
+    }
+
+    .upload-block-image
+    {
+        width: 70%;
+    }
+
+    .center-side_bottom-row{
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .left-side{
+        width: 100%;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .right-side{
+        width: 100%;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .screenshoot-block{
+        width: 100%;
+        height: 40vw;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
