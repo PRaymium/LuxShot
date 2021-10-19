@@ -17,6 +17,11 @@ body
     max-width: 1920px;
     width: 100%;
     min-height: calc(100vh - 100px);
+    transition: .1s ease-in-out;
+}
+
+.global-container.active{
+    filter: blur(20px);
 }
 
 .wrapper{
@@ -183,10 +188,14 @@ body
     font-size: 2em;
     margin: 0px 20px;
     display: none;
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
 
 .authorization-form.active{
+    transition: 1s ease-in-out;
     display: block;
+    opacity: 1;
 }
 
 .login-form{
