@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #090B21;
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+}
+
+.global-container{
+    max-width: 1920px;
+    width: 100%;
+    min-height: calc(100vh - 100px);
+}
+
+.header-wrapper{
+    margin: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link{
+    text-decoration: none;
+    color: #ED2545;
+    display: flex;
+    align-items: center;
+    padding: 25px 0px;
+}
+
+.logo-link_text{
+    font-family: 'Rancho', cursive;
+    font-size: 3em;
+    padding-left: 10px;
+}
+
+.login-button{
+    color: #FFF;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.main-wrapper{
+    margin: 0px 50px;
+}
+
+.upload-block{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ED2545;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.upload-block_text{
+    font-size: 2em;
+    color: #45112A;
+    width: 700px;
+    text-align: center;
+    padding: 60px 0px;
+}
+
+.screenshots-block{
+    margin: 30px 0px;
+}
+
+.screenshots-block_title
+{
+    font-size: 2em;
+    color: #ED2545;
+    text-align: center;
+}
+
+.screenshots{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+    column-gap: 40px;
+}
+
+.screenshot{
+    color: #3A3C4C;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 560px;
+    height: 315px;
+    border: 1px solid #3A3C4C;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.footer{
+    width: 100%;
+    max-width: 1920px;
+    height: 100px;
+    border-top: 1px solid #ED2545;
+    border-radius: 10px;
+    font-size: 2em;
+}
+
+.footer-wrapper{
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    color: #45112A;
+}
+
+.footer_author{
+    text-decoration: none;
+    color: #45112A;
+}
+
+
+@media screen and (max-width: 1270px){
+    .screenshots{
+        justify-content: center;
+    }   
+}
+
+@media screen and (max-width: 670px){
+    
+}
