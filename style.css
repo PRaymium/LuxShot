@@ -19,8 +19,11 @@ body
     min-height: calc(100vh - 100px);
 }
 
-.header-wrapper{
+.wrapper{
     margin: 0px 50px;
+}
+
+.header-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,20 +37,42 @@ body
     padding: 25px 0px;
 }
 
+.logo-link:hover .logo-link_picture{
+    filter: drop-shadow(0px 0px 5px #ED2545);
+}
+
 .logo-link_text{
     font-family: 'Rancho', cursive;
     font-size: 3em;
     padding-left: 10px;
 }
 
+.logo-link_picture{
+    transition: .1s ease-in-out;
+}
+
+.logo-link_picture>img{
+    width: 100%;
+}
+
 .login-button{
     color: #FFF;
     font-size: 2em;
     cursor: pointer;
+    transition: .1s ease-in-out;
+    user-select: none;
+}
+
+.login-button:hover{
+    color: #ED2545;
+}
+
+.login-button:active{
+    transform: translateY(2px);
 }
 
 .main-wrapper{
-    margin: 0px 50px;
+    margin: 50px;
 }
 
 .upload-block{
@@ -58,6 +83,15 @@ body
     border: 1px solid #ED2545;
     border-radius: 50px;
     cursor: pointer;
+    transition: .1s ease-in-out;
+}
+
+.upload-block:hover{
+    background-color: #45112a0a;
+}
+
+.upload-block:hover .upload-block_text{
+    color: #68111f;
 }
 
 .upload-block_text{
@@ -66,10 +100,11 @@ body
     width: 700px;
     text-align: center;
     padding: 60px 0px;
+    transition: .1s ease-in-out;
 }
 
 .screenshots-block{
-    margin: 30px 0px;
+    margin-top: 30px;
 }
 
 .screenshots-block_title
@@ -99,6 +134,17 @@ body
     border: 1px solid #3A3C4C;
     border-radius: 20px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.screenshot-img
+{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .footer{
@@ -111,7 +157,6 @@ body
 }
 
 .footer-wrapper{
-    margin: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,5 +177,63 @@ body
 }
 
 @media screen and (max-width: 670px){
+    body {
+        font-size: 12px;
+    }
+
+    .logo-link_picture {
+        width: 30px;
+    }
+
+    .screenshot{
+        width: 100%;
+        height: 0px;
+        padding-bottom: calc(100%/16*9);
+    }
+
+    .logo-link_text{
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    body {
+        font-size: 2.5vw;
+    }
+
+    .global-container{
+        min-height: calc(100vh - 50px);
+    }    
+
+    .logo-link_picture {
+        width: 3em;
+    }
+
+    .wrapper{
+        margin: 0px 5%;
+    }
     
+    .main-wrapper{
+        margin: 30px 5%;
+    } 
+
+    .upload-block{
+        border-radius: 5vw;
+    }    
+
+    .upload-block_text{
+        padding: 8vw 0px;
+    } 
+    
+    .screenshots{
+        row-gap: 20px;
+    }
+    
+    .screenshot{
+        border-radius: 5vw;
+    }
+    
+    .footer{
+        height: 50px;
+    }    
 }
