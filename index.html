@@ -8,17 +8,26 @@
     <title>LuxShot</title>
 </head>
 <body>
-    
+    <div class="preloader">
+        <div href="#" class="logo-link logo-link-preloader">
+            <div class="logo-link_picture">
+                <img src="Img/logo-picture.png" alt="">
+            </div>
+            <div class="logo-link_text">
+               LuxShot
+           </div>
+       </div>
+    </div>
     <div class="authorization-form">
         <form action="#" class="login-form">
             <ul class="login-form-list">
                 <li>
-                    <label for="login" class="login-form-label">Логин</label>
-                    <input type="text" class="login-input">
+                    <label for="login" class="form-label login-form-label">Логин</label>
+                    <input type="text" class="form-input login-input">
                 </li>
                 <li>
-                    <label for="password" class="login-form-label">Пароль</label>
-                    <input type="password" class="password-input">
+                    <label for="password" class="form-label login-form-label">Пароль</label>
+                    <input type="password" class="form-input password-input">
                 </li>
                 <li>
                     <input type="submit" class="form-login-button" value="Войти">
@@ -26,6 +35,39 @@
             </ul>
             <div class="reg-toggle">Регистрация</div>
         </form>
+        <form action="#" class="signup-form">
+            <ul class="login-form-list">
+                <li>
+                    <label for="name" class="form-label name-form-label">Имя</label>
+                    <input type="text" class="form-input name-input">
+                </li>
+                <li>
+                    <label for="email" class="form-label email-form-label">E-mail</label>
+                    <input type="email" class="form-input email-input">
+                </li>
+                <li>
+                    <label for="phone" class="form-label phone-form-label">Телефон</label>
+                    <input type="text" class="form-input phone-input">
+                </li>
+                <li>
+                    <label for="password" class="form-label password-form-label">Пароль</label>
+                    <input type="password" class="form-input password-input">
+                </li>
+                <li>
+                    <label for="password" class="form-label password-form-label">Повторите пароль</label>
+                    <input type="password" class="form-input password-input">
+                </li>
+                <li class="checkbox-li">
+                    <label for="checkbox" class="form-label checkbox-form-label">Соглашение на обработку персональных данных</label>
+                    <input type="checkbox" class="form-signup-checkbox" >
+                </li>
+                <li>
+                    <input type="submit" class="form-signup-button" value="Зарегистрироваться">
+                </li>
+            </ul>
+            <div class="login-toggle">Вход</div>
+        </form>
+        <div class="close-form-button">X</div>
     </div>
     <div class="global-container">
         <header>

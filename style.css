@@ -13,15 +13,34 @@ body
     font-size: 16px;
 }
 
+.preloader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #090B21;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out;
+    transition-delay: .5s;
+}
+
+.preloader.loaded{
+    opacity: 0;
+    z-index: -9999;
+}
+
 .global-container{
     max-width: 1920px;
     width: 100%;
     min-height: calc(100vh - 100px);
-    transition: .1s ease-in-out;
+    transition: .2s ease-in-out;
 }
 
 .global-container.active{
     filter: blur(20px);
+    z-index: -1;
 }
 
 .wrapper{
@@ -40,6 +59,7 @@ body
     display: flex;
     align-items: center;
     padding: 25px 0px;
+    cursor: pointer;
 }
 
 .logo-link:hover .logo-link_picture{
@@ -172,12 +192,17 @@ body
 .footer_author{
     text-decoration: none;
     color: #45112A;
+    transition: .2s ease-in-out;
+}
+
+.footer_author:hover{
+    color: #ED2545;
 }
 
 /* #####FORM##### */
 
 .authorization-form{
-    z-index: 1;
+    z-index: -1000;
     position: fixed;
     top: 50%;
     transform: translate(0, -50%);
@@ -187,22 +212,29 @@ body
     color: #c4c4c4;
     font-size: 2em;
     margin: 0px 20px;
-    display: none;
     opacity: 0;
-    transition: 1s ease-in-out;
+    transition: .2s ease-in-out;
+    box-shadow: 0px 0px 5px #ED2545;
 }
 
 .authorization-form.active{
-    transition: 1s ease-in-out;
-    display: block;
+    z-index: 5;
     opacity: 1;
 }
 
-.login-form{
+.login-form, .signup-form{
     padding: 30px 50px;
 }
 
-.login-input, .password-input{
+.signup-form, .login-form.non_visible{
+    display: none;
+}
+
+.signup-form.visible{
+    display: block;
+}
+
+.form-input{
     width: 100%;
     font-size: 0.5em;
     background-color: transparent;
@@ -216,8 +248,9 @@ body
     padding: 0px;
 }
 
-.login-form-label{
+.form-label{
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .login-form-list>li{
@@ -227,9 +260,8 @@ body
     margin-top: 20px;
 }
 
-.form-login-button{
+.form-login-button, .form-signup-button{
     width: 100%;
-    margin-top: 10px;
     color: #45112A;
     background-color: transparent;
     border: 1px solid #ED2545;
@@ -240,20 +272,52 @@ body
     transition: .1s ease-in-out;
 }
 
-.form-login-button:hover{
+.form-login-button:hover, .form-signup-button:hover{
     color: #ED2545;
     background-color: rgba(255,255,255,0.1);
 }
 
-.form-login-button:active{
+.form-login-button:active, .form-signup-button:active{
     background-color: rgba(255,255,255,0.2);
 }
 
-.reg-toggle{
+.reg-toggle, .login-toggle{
     text-align: center;
     color: #45112A;
     cursor: pointer;
+    transition: .2s ease-in-out;
 }
+
+.reg-toggle:hover, .login-toggle:hover{
+    color: #ED2545;
+}
+
+.reg-toggle:active, .login-toggle:active{
+    transform: translateY(5px);
+}
+
+.checkbox-form-label{
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.form-signup-checkbox{
+    width: 25px;
+    height: 25px;
+}
+
+.close-form-button{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    user-select: none;
+}
+.close-form-button:hover{
+    color: #ED2545;
+}
+
 
 @media screen and (max-width: 1270px){
     .screenshots{
@@ -320,5 +384,23 @@ body
     
     .footer{
         height: 50px;
-    }    
+    } 
+    
+    .login-form, .signup-form{
+        padding: 10px 20px;
+    }
+
+    .form-login-button, .form-signup-button{
+        padding: 5px 0px;
+    }
+
+    .close-form-button{
+        top: 10px;
+        right: 10px;
+    }
+
+    .form-signup-checkbox{
+        width: 5vw;
+        height: 5vw;
+    }
 }
