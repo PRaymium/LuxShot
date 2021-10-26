@@ -210,9 +210,9 @@ body
 
 /* #####FORM##### */
 
-.authorization-form{
-    z-index: -1000;
-    position: fixed;
+.login-form, .signup-form{
+    z-index: -10;
+    position: absolute;
     top: 50%;
     transform: translate(0, -50%);
     background-color: #090B21;
@@ -221,38 +221,28 @@ body
     color: #c4c4c4;
     font-size: 2em;
     margin: 0px 20px;
+    padding: 30px 50px;
     opacity: 0;
     transition: .2s ease-in-out;
     box-shadow: 0px 0px 5px #ED2545;
 }
 
-.authorization-form.active{
-    z-index: 5;
+.login-form.visible, .signup-form.visible{
+    position: fixed;
     opacity: 1;
-}
-
-.login-form, .signup-form{
-    padding: 30px 50px;
-}
-
-.signup-form, .login-form.non-visible{
-    display: none;
-}
-
-.signup-form.visible{
-    display: block;
+    z-index: 5;
 }
 
 .form-input{
     width: 100%;
-    font-size: 0.5em;
+    font-size: 0.6em;
     background-color: transparent;
     border: 1px solid #3A3C4C;
     border-radius: 5px;
     color: #c4c4c4;
 }
 
-.login-form-list{
+.login-form-list, .signup-form-list{
     list-style-type: none;
     padding: 0px;
 }
@@ -262,7 +252,7 @@ body
     text-align: center;
 }
 
-.login-form-list>li{
+.login-form-list>li, .signup-form-list>li{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -323,6 +313,7 @@ body
     transition: .2s ease-in-out;
     user-select: none;
 }
+
 .close-form-button:hover{
     color: #ED2545;
 }
@@ -394,9 +385,10 @@ body
     .footer{
         height: 50px;
     } 
-    
+
     .login-form, .signup-form{
         padding: 10px 20px;
+        font-size: 2.5em;
     }
 
     .form-login-button, .form-signup-button{
