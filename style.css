@@ -28,7 +28,16 @@ body
 
 .preloader.loaded{
     opacity: 0;
-    z-index: -9999;
+    z-index: -999;
+}
+
+.logo-link-preloader{
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.preloader.loaded>.logo-link-preloader{
+    opacity: 1;
 }
 
 .global-container{
@@ -226,7 +235,7 @@ body
     padding: 30px 50px;
 }
 
-.signup-form, .login-form.non_visible{
+.signup-form, .login-form.non-visible{
     display: none;
 }
 
