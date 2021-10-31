@@ -30,3 +30,34 @@ close_form_button[1].onclick = function() {
 	signup_form[0].classList.remove("visible");
 	global_container[0].classList.remove("active");
 }
+
+
+let loginForm = document.forms.loginForm;
+
+loginForm.onsubmit = async function(e) {
+	e.preventDefault();
+
+	let formData = new FormData(this);
+
+	let response = await fetch('https://httpbin.org/post', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json;charset=utf-8'
+		  },
+		body: JSON.stringify(formData)
+	});
+
+	if (response.ok){
+		let result = await response.json();
+		alert(result.message);
+	}
+	else {
+		alert('Ошибка HTTP: ' + response.status);
+	}
+}
+	
+
+// loginForm.addeventListener('submit', function(e) {
+	
+
+// });
