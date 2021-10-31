@@ -285,10 +285,15 @@ body
     color: #45112A;
     cursor: pointer;
     transition: .2s ease-in-out;
+    border-left: 1px dotted #ED2545;
+    border-right: 1px dotted #ED2545;
+    border-radius: 5px;
 }
 
 .reg-toggle:hover, .login-toggle:hover{
     color: #ED2545;
+    border-left: 1px solid #ED2545;
+    border-right: 1px solid #ED2545;
 }
 
 .reg-toggle:active, .login-toggle:active{

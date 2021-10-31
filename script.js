@@ -34,6 +34,7 @@ close_form_button[1].onclick = function() {
 
 let loginForm = document.forms.loginForm;
 
+
 loginForm.onsubmit = async function(e) {
 	e.preventDefault();
 
@@ -47,17 +48,50 @@ loginForm.onsubmit = async function(e) {
 		body: JSON.stringify(formData)
 	});
 
+	console.log(JSON.stringify(formData));
+
 	if (response.ok){
 		let result = await response.json();
-		alert(result.message);
+		console.log(result);
 	}
 	else {
 		alert('Ошибка HTTP: ' + response.status);
 	}
 }
+
+
+// loginForm.onsubmit = function(e) {
+// 	e.preventDefault();
+// 	let formData = new FormData(this);
+
+
 	
 
-// loginForm.addeventListener('submit', function(e) {
-	
+// 	for (let pair of formData.entries()) {
+// 		console.log(pair[0] + ", " + pair[1]);
+// 	}
+// 	console.log(formData.get('email'));
+// }
 
-// });
+// loginForm.onsubmit = async function(e) {
+// 	e.preventDefault();
+
+// 	let formData = new FormData(this);
+
+// 	let response = await fetch('https://httpbin.org/post', {
+// 		method: 'POST',
+// 		headers: {
+// 			'Content-Type': 'application/json;charset=utf-8'
+// 		  },
+// 		body: JSON.stringify(formData)
+// 	});
+
+// 	if (response.ok){
+// 		let result = await response.json();
+// 		let res = result.form;
+// 		console.log(result);
+// 	}
+// 	else {
+// 		alert('Ошибка HTTP: ' + response.status);
+// 	}
+// }
