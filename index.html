@@ -24,11 +24,11 @@
             <ul class="login-form-list">
                 <li>
                     <label for="email-input" class="form-label login-form-label">Логин</label>
-                    <input name="email" id="email-input" type="email" class="form-input login-input" required title="Введите email в формате xxx@xxx.xx">
+                    <input name="email" id="loginForm-email-input" type="email" class="form-input login-input" required title="Введите email в формате xxx@xxx.xx">
                 </li>
                 <li>
                     <label for="password" class="form-label login-form-label">Пароль</label>
-                    <input name="password" id="password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
+                    <input name="password" id="loginForm-password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
                 </li>
                 <li>
                     <input type="submit" class="form-login-button" value="Войти">
@@ -41,27 +41,27 @@
             <ul class="signup-form-list">
                 <li>
                     <label for="name-input" class="form-label name-form-label">Имя</label>
-                    <input id="name-input" type="name" class="form-input name-input" required pattern="[А-Яа-я\s-]*" title="Используйте русские буквы для ввода">
+                    <input id="signUpForm-name-input" type="name" class="form-input name-input" required pattern="[А-Яа-я\s-]*" title="Используйте русские буквы для ввода">
                 </li>
                 <li>
                     <label for="email-input" class="form-label email-form-label">E-mail</label>
-                    <input id = "email-input" type="email" class="form-input email-input" required title="Введите email в формате xxx@xxx.xx">
+                    <input id = "signUpForm-email-input" type="email" class="form-input email-input" required title="Введите email в формате xxx@xxx.xx">
                 </li>
                 <li>
                     <label for="phone-input" class="form-label phone-form-label">Телефон</label>
-                    <input id ="phone-input" type="text" class="form-input phone-input" required pattern="8\s\d{3}\s\d{3}\s\d{2}\s\d{2}" title="Введите телефон в формате 8 ххх ххх хх хх">
+                    <input id ="signUpForm-phone-input" type="text" class="form-input phone-input" required pattern="8\s\d{3}\s\d{3}\s\d{2}\s\d{2}" title="Введите телефон в формате 8 ххх ххх хх хх">
                 </li>
                 <li>
                     <label for="password-input" class="form-label password-form-label">Пароль</label>
-                    <input id ="password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
+                    <input id ="signUpForm-password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
                 </li>
                 <li>
                     <label for="password-input" class="form-label password-form-label">Повторите пароль</label>
-                    <input id="password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
+                    <input id="signUpForm-passwordCheck-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
                 </li>
                 <li class="checkbox-li">
                     <label for="checkbox-input" class="form-label checkbox-form-label">Соглашение на обработку персональных данных</label>
-                    <input id="checkbox-input" type="checkbox" class="form-input form-signup-checkbox" required>
+                    <input id="signUpForm-scheckbox-input" type="checkbox" class="form-input form-signup-checkbox" required>
                 </li>
                 <li>
                     <input type="submit" class="form-signup-button" value="Зарегистрироваться">

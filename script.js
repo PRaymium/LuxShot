@@ -42,56 +42,14 @@ loginForm.onsubmit = async function(e) {
 
 	let response = await fetch('https://httpbin.org/post', {
 		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json;charset=utf-8'
-		  },
-		body: JSON.stringify(formData)
+		body: formData
 	});
-
-	console.log(JSON.stringify(formData));
 
 	if (response.ok){
 		let result = await response.json();
-		console.log(result);
+		console.log(result.form);
 	}
 	else {
 		alert('Ошибка HTTP: ' + response.status);
 	}
 }
-
-
-// loginForm.onsubmit = function(e) {
-// 	e.preventDefault();
-// 	let formData = new FormData(this);
-
-
-	
-
-// 	for (let pair of formData.entries()) {
-// 		console.log(pair[0] + ", " + pair[1]);
-// 	}
-// 	console.log(formData.get('email'));
-// }
-
-// loginForm.onsubmit = async function(e) {
-// 	e.preventDefault();
-
-// 	let formData = new FormData(this);
-
-// 	let response = await fetch('https://httpbin.org/post', {
-// 		method: 'POST',
-// 		headers: {
-// 			'Content-Type': 'application/json;charset=utf-8'
-// 		  },
-// 		body: JSON.stringify(formData)
-// 	});
-
-// 	if (response.ok){
-// 		let result = await response.json();
-// 		let res = result.form;
-// 		console.log(result);
-// 	}
-// 	else {
-// 		alert('Ошибка HTTP: ' + response.status);
-// 	}
-// }
