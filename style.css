@@ -204,7 +204,7 @@ body
     color: #ED2545;
 }
 
-/* #####FORM##### */
+/* #####FORMS##### */
 
 .form-container{
     position: fixed;
@@ -219,7 +219,7 @@ body
     transition: .2s ease-in-out;
 }
 
-.form-container.active{
+.form-container.blurred{
     background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
     z-index: 5;
@@ -282,7 +282,7 @@ body
 
 .form-login-button, .form-signup-button{
     width: 100%;
-    color: #45112A;
+    color: #ED2545;
     background-color: transparent;
     border: 1px solid #ED2545;
     border-radius: 5px;
@@ -293,7 +293,6 @@ body
 }
 
 .form-login-button:hover, .form-signup-button:hover{
-    color: #ED2545;
     background-color: rgba(255,255,255,0.1);
 }
 
@@ -414,6 +413,7 @@ body
     .login-form, .signup-form{
         padding: 10px 20px;
         font-size: 2.5em;
+        border-radius: 5vw;
     }
 
     .form-login-button, .form-signup-button{

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"><head></head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>LuxShot</title>
 </head>
 <body>
@@ -19,55 +19,55 @@
            </div>
        </div>
     </div>
-    <div class="form-container">
-        <form class="login-form" name="loginForm" method="POST">
+    <div class="form-container" id="form-container">
+        <form class="login-form" name="loginForm" method="POST" id="login-form" dataset="login-form">
             <ul class="login-form-list">
                 <li>
-                    <label for="email-input" class="form-label login-form-label">Логин</label>
-                    <input name="email" id="loginForm-email-input" type="email" class="form-input login-input" required title="Введите email в формате xxx@xxx.xx">
+                    <label for="loginForm-email-input" class="form-label login-form-label">Логин</label>
+                    <input name="email" id="loginForm-email-input" type="email" class="form-input login-input" required placeholder="example@example.com" title="Введите email в формате xxx@xxx.xx">
                 </li>
                 <li>
-                    <label for="password" class="form-label login-form-label">Пароль</label>
+                    <label for="loginForm-password-input" class="form-label login-form-label">Пароль</label>
                     <input name="password" id="loginForm-password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
                 </li>
                 <li>
                     <input type="submit" class="form-login-button" value="Войти">
                 </li>
             </ul>
-            <div class="reg-toggle">Регистрация</div>
+            <div class="reg-toggle" id="login-form-button-to-signup">Регистрация</div>
             <div class="close-form-button">X</div>
         </form>
-        <form class="signup-form">
+        <form class="signup-form" id="signup-form" dataset="singup-form">
             <ul class="signup-form-list">
                 <li>
-                    <label for="name-input" class="form-label name-form-label">Имя</label>
-                    <input id="signUpForm-name-input" type="name" class="form-input name-input" required pattern="[А-Яа-я\s-]*" title="Используйте русские буквы для ввода">
+                    <label for="signupForm-name-input" class="form-label name-form-label">Имя</label>
+                    <input name="name" id="signupForm-name-input" type="name" class="form-input name-input" required placeholder="Иван" pattern="[А-Яа-я\s-]*" title="Используйте русские буквы для ввода">
                 </li>
                 <li>
-                    <label for="email-input" class="form-label email-form-label">E-mail</label>
-                    <input id = "signUpForm-email-input" type="email" class="form-input email-input" required title="Введите email в формате xxx@xxx.xx">
+                    <label for="signupForm-email-input" class="form-label email-form-label">E-mail</label>
+                    <input name="email" id = "signupForm-email-input" type="email" class="form-input email-input" required placeholder="example@example.com" title="Введите email в формате xxx@xxx.xx">
                 </li>
                 <li>
-                    <label for="phone-input" class="form-label phone-form-label">Телефон</label>
-                    <input id ="signUpForm-phone-input" type="text" class="form-input phone-input" required pattern="8\s\d{3}\s\d{3}\s\d{2}\s\d{2}" title="Введите телефон в формате 8 ххх ххх хх хх">
+                    <label for="signupForm-phone-input" class="form-label phone-form-label">Телефон</label>
+                    <input name="phone" id ="signupForm-phone-input" type="text" class="form-input phone-input" required placeholder="89007778899" pattern="8\d{3}\d{3}\d{2}\d{2}" title="Введите телефон в формате 8**********, например 89007778899">
                 </li>
                 <li>
-                    <label for="password-input" class="form-label password-form-label">Пароль</label>
-                    <input id ="signUpForm-password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
+                    <label for="signupForm-password-input" class="form-label password-form-label">Пароль</label>
+                    <input name="password" id ="signupForm-password-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
                 </li>
                 <li>
-                    <label for="password-input" class="form-label password-form-label">Повторите пароль</label>
-                    <input id="signUpForm-passwordCheck-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
+                    <label for="signupForm-passwordRepeat-input" class="form-label password-form-label">Повторите пароль</label>
+                    <input name="passwordRepeat" id="signupForm-passwordRepeat-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
                 </li>
                 <li class="checkbox-li">
-                    <label for="checkbox-input" class="form-label checkbox-form-label">Соглашение на обработку персональных данных</label>
-                    <input id="signUpForm-scheckbox-input" type="checkbox" class="form-input form-signup-checkbox" required>
+                    <label for="signupForm-checkbox-input" class="form-label checkbox-form-label">Соглашение на обработку персональных данных</label>
+                    <input name="checkbox" id="signupForm-checkbox-input" type="checkbox" class="form-input form-signup-checkbox" required>
                 </li>
                 <li>
                     <input type="submit" class="form-signup-button" value="Зарегистрироваться">
                 </li>
             </ul>
-            <div class="login-toggle">Вход</div>
+            <div class="login-toggle" id="signup-form-button-to-login">Вход</div>
             <div class="close-form-button">X</div>
         </form>
     </div>
@@ -82,7 +82,7 @@
                         LuxShot
                     </div>
                 </a>
-                <div class="login-button">Войти</div>
+                <div class="login-button" id="header-login-button">Войти</div>
             </div>
         </header>
         <main>
