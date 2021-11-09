@@ -15,6 +15,17 @@ body
     height: 100%;
 }
 
+body::-webkit-scrollbar{
+    width: 2px; 
+}
+
+body::-webkit-scrollbar-thumb
+{
+    width: 2px;
+    background-color: #ED2545; 
+    border-radius: 10px;
+}
+
 .preloader{
     position: fixed;
     width: 100vw;
@@ -90,7 +101,6 @@ body
     font-size: 2em;
     cursor: pointer;
     transition: .1s ease-in-out;
-    user-select: none;
 }
 
 .login-button:hover{
@@ -221,7 +231,9 @@ body
 
 .form-container.blurred{
     background-color: rgba(0,0,0,0.5);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    
     z-index: 5;
 }
 
@@ -336,7 +348,6 @@ body
     right: 15px;
     cursor: pointer;
     transition: .2s ease-in-out;
-    user-select: none;
 }
 
 .close-form-button:hover{
