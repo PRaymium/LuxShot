@@ -1,7 +1,7 @@
 let loginButton = document.getElementById('header-login-button');
 let formContainer = document.getElementById('form-container');
-let loginFormToSignupToggle = document.getElementById('login-form-button-to-signup');
-let signupFormToLoginToggle = document.getElementById('signup-form-button-to-login');
+let loginFormToSignupFormToggle = document.getElementById('login-form-button-to-signup');
+let signupFormToLoginFormToggle = document.getElementById('signup-form-button-to-login');
 let closeFormButton = document.getElementsByClassName('close-form-button');
 
 let loginForm = document.getElementById('login-form');
@@ -12,12 +12,12 @@ loginButton.onclick = function() {
     formContainer.classList.add("blurred");
 }
 
-loginFormToSignupToggle.onclick = function() {
+loginFormToSignupFormToggle.onclick = function() {
 	signupForm.classList.add("visible");
 	loginForm.classList.remove("visible")
 }
 
-signupFormToLoginToggle.onclick = function() {
+signupFormToLoginFormToggle.onclick = function() {
 	signupForm.classList.remove("visible");
 	loginForm.classList.add("visible")
 }
@@ -53,20 +53,6 @@ function nameCheck(input){
 function phoneCheck(input){
 	input.pattern = "8\\d{3}\\d{3}\\d{2}\\d{2}";
 	return input.checkValidity();
-}
-
-function loginFormValidation(){
-	var loginFormEmailInput = document.getElementById("loginForm-email-input");
-	var loginFormPasswordInput = document.getElementById("loginForm-password-input");
-
-	if (!emailCheck(loginFormEmailInput)){
-		return false;
-	}
-	if (!passwordCheck(loginFormPasswordInput)){
-		return false;
-	}
-
-	return true;
 }
 
 function signupFormValidation(){
@@ -105,14 +91,7 @@ function signupFormValidation(){
 
 async function authorizationDataSend(e){
 	e.preventDefault();
-	if (e.target.id === "login-form")
-	{
-		if (!loginFormValidation())
-		{
-			return;
-		}
-	}
-	else if (e.target.id === "signup-form")
+	if (e.target.id === "signup-form")
 	{
 		if (!signupFormValidation())
 		{
