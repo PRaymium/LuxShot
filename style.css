@@ -164,26 +164,45 @@ body::-webkit-scrollbar-thumb
 
 .screenshot{
     color: #3A3C4C;
-    font-size: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 560px;
-    height: 315px;
+    font-size: 2em;
     border: 1px solid #3A3C4C;
     border-radius: 20px;
     cursor: pointer;
+    transition: .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.screenshot-img-block{
+    width: 560px;
+    height: 315px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
 }
 
 .screenshot-img
 {
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     height: 100%;
     width: 100%;
-    position: absolute;
+    object-fit: contain;
+    /* position: absolute; */
+}
+
+.screenshot:hover{
+    border: 1px solid #ED2545;
+    transform: translateY(-5px);
+}
+
+.screenshot-date{
+    padding: 10px 20px;
 }
 
 .footer{
@@ -372,8 +391,15 @@ body::-webkit-scrollbar-thumb
 
     .screenshot{
         width: 100%;
-        height: 0px;
-        padding-bottom: calc(100%/16*9);
+        /* height: 0px; */
+        /* padding-bottom: calc(100%/16*9); */
+    }
+
+    .screenshot-img-block{
+        width: 100%;
+        max-height: 315px;
+        height: auto;
+        /* position: relative; */
     }
 
     .logo-link_text{
@@ -412,6 +438,14 @@ body::-webkit-scrollbar-thumb
     
     .screenshot{
         border-radius: 5vw;
+    }
+
+    .screenshot-img-block{
+        border-radius: 5vw;
+    }
+
+    .screenshot-date{
+        padding: 2vw 3vw;
     }
 
     .login-form, .signup-form{
