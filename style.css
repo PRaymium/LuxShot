@@ -53,19 +53,16 @@ body::-webkit-scrollbar-thumb
     opacity: 1;
 }
 
-.global-container{
+.header, .main, .footer{
     max-width: 1920px;
     width: 100%;
-}
-
-.wrapper{
-    margin: 0px 50px;
 }
 
 .header-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 50px;
 }
 
 .logo-link{
@@ -217,7 +214,7 @@ body::-webkit-scrollbar-thumb
     align-items: center;
     height: inherit;
     color: #45112A;
-    padding: 25px 0px;
+    padding: 25px 50px;
 }
 
 .footer_author{
@@ -253,7 +250,7 @@ body::-webkit-scrollbar-thumb
     z-index: 5;
 }
 
-.login-form, .signup-form{
+.auth-form{
     position: absolute;
     z-index: -10;
     background-color: #090B21;
@@ -272,11 +269,11 @@ body::-webkit-scrollbar-thumb
     transform: translateY(-20px);
 }
 
-.login-form::-webkit-scrollbar, .signup-form::-webkit-scrollbar{
+.auth-form::-webkit-scrollbar{
     display: none;
 }
 
-.login-form.visible, .signup-form.visible{
+.auth-form.visible{
     opacity: 1;
     z-index: 6;
     transform: translateY(0px);
@@ -295,7 +292,7 @@ body::-webkit-scrollbar-thumb
     border: 1px dotted #3A3C4C;
 }
 
-.login-form-list, .signup-form-list{
+.auth-form-list{
     list-style-type: none;
     padding: 0px;
 }
@@ -305,14 +302,14 @@ body::-webkit-scrollbar-thumb
     text-align: center;
 }
 
-.login-form-list>li, .signup-form-list>li{
+.auth-form-list>li{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
-.form-login-button, .form-signup-button{
+.auth-form-submit-button{
     width: 100%;
     color: #ED2545;
     background-color: transparent;
@@ -324,15 +321,15 @@ body::-webkit-scrollbar-thumb
     transition: .1s ease-in-out;
 }
 
-.form-login-button:hover, .form-signup-button:hover{
+.auth-form-submit-button:hover{
     background-color: rgba(255,255,255,0.1);
 }
 
-.form-login-button:active, .form-signup-button:active{
+.auth-form-submit-button:active{
     background-color: rgba(255,255,255,0.2);
 }
 
-.reg-toggle, .login-toggle{
+.auth-form-toggle{
     text-align: center;
     color: #45112A;
     cursor: pointer;
@@ -342,13 +339,13 @@ body::-webkit-scrollbar-thumb
     border-radius: 5px;
 }
 
-.reg-toggle:hover, .login-toggle:hover{
+.auth-form-toggle:hover{
     color: #ED2545;
     border-left: 1px solid #ED2545;
     border-right: 1px solid #ED2545;
 }
 
-.reg-toggle:active, .login-toggle:active{
+.auth-form-toggle:active{
     transform: translateY(5px);
 }
 
@@ -410,19 +407,27 @@ body::-webkit-scrollbar-thumb
 @media screen and (max-width: 500px){
     body {
         font-size: 2.5vw;
-    }    
+    }  
+    
+    .header-wrapper{
+        margin: 0 5%;
+    }
+
+    .logo-link{
+        padding: 3% 0;
+    }
 
     .logo-link_picture {
         width: 3em;
     }
-
-    .wrapper{
-        margin: 0px 5%;
-    }
     
     .main-wrapper{
-        margin: 30px 5%;
+        margin: 5% 5%;
     } 
+
+    .screenshots-block{
+        margin-top: 5%;
+    }
 
     .upload-block{
         border-radius: 5vw;
@@ -434,6 +439,7 @@ body::-webkit-scrollbar-thumb
     
     .screenshots{
         row-gap: 20px;
+        margin-top: 8%;
     }
     
     .screenshot{
@@ -448,13 +454,18 @@ body::-webkit-scrollbar-thumb
         padding: 2vw 3vw;
     }
 
-    .login-form, .signup-form{
+    .footer-wrapper{
+        margin: 10px 5%;
+        padding: 2% 0;
+    } 
+
+    .auth-form{
         padding: 10px 20px;
         font-size: 2.5em;
         border-radius: 5vw;
     }
 
-    .form-login-button, .form-signup-button{
+    .auth-form-submit-button{
         padding: 5px 0px;
     }
 

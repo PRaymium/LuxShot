@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -20,25 +19,25 @@
        </div>
     </div>
     <div class="form-container" id="form-container">
-        <form class="login-form" name="loginForm" method="POST" id="login-form" dataset="login-form">
-            <ul class="login-form-list">
+        <form class="auth-form" name="loginForm" method="POST" id="login-form">
+            <ul class="auth-form-list">
                 <li>
-                    <label for="loginForm-email-input" class="form-label login-form-label">Логин</label>
+                    <label for="loginForm-email-input" class="form-label auth-form-label">Логин</label>
                     <input name="email" id="loginForm-email-input" type="email" class="form-input login-input" required placeholder="   example@example.com">
                 </li>
                 <li>
-                    <label for="loginForm-password-input" class="form-label login-form-label">Пароль</label>
+                    <label for="loginForm-password-input" class="form-label auth-form-label">Пароль</label>
                     <input name="password" id="loginForm-password-input" type="password" class="form-input password-input" required>
                 </li>
                 <li>
-                    <input type="submit" class="form-login-button" value="Войти">
+                    <input type="submit" class="auth-form-submit-button" value="Войти">
                 </li>
             </ul>
-            <div class="reg-toggle" id="login-form-button-to-signup">Регистрация</div>
+            <div class="auth-form-toggle" id="login-form-button-to-signup">Регистрация</div>
             <div class="close-form-button">X</div>
         </form>
-        <form class="signup-form" id="signup-form" dataset="singup-form">
-            <ul class="signup-form-list">
+        <form class="auth-form" id="signup-form">
+            <ul class="auth-form-list">
                 <li>
                     <label for="signupForm-name-input" class="form-label name-form-label">Имя</label>
                     <input name="name" id="signupForm-name-input" type="name" class="form-input name-input" required placeholder="   Иван" pattern="[А-Яа-я\s-]*" title="Используйте русские буквы для ввода">
@@ -57,127 +56,125 @@
                 </li>
                 <li>
                     <label for="signupForm-passwordRepeat-input" class="form-label password-form-label">Повторите пароль</label>
-                    <input name="passwordRepeat" id="signupForm-passwordRepeat-input" type="password" class="form-input password-input" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" title="Минимум 6 символов. Обязательно наличие букв и цифр">
+                    <input name="passwordRepeat" id="signupForm-passwordRepeat-input" type="password" class="form-input password-input" required title="Повторите пароль">
                 </li>
                 <li class="checkbox-li">
                     <label for="signupForm-checkbox-input" class="form-label checkbox-form-label">Соглашение на обработку персональных данных</label>
                     <input name="checkbox" id="signupForm-checkbox-input" type="checkbox" class="form-input form-signup-checkbox" required>
                 </li>
                 <li>
-                    <input type="submit" class="form-signup-button" value="Зарегистрироваться">
+                    <input type="submit" class="auth-form-submit-button" value="Зарегистрироваться">
                 </li>
             </ul>
-            <div class="login-toggle" id="signup-form-button-to-login">Вход</div>
+            <div class="auth-form-toggle" id="signup-form-button-to-login">Вход</div>
             <div class="close-form-button">X</div>
         </form>
     </div>
-    <div class="global-container">
-        <header>
-            <div class="wrapper header-wrapper">
-                <a href="#" class="logo-link">
-                    <div class="logo-link_picture">
-                        <img src="Img/logo-picture.png" alt="">
-                    </div>
-                    <div class="logo-link_text">
-                        LuxShot
-                    </div>
-                </a>
-                <div class="login-button" id="header-login-button">Войти</div>
-            </div>
-        </header>
-        <main>
-            <div class="wrapper main-wrapper">
-                <div class="upload-block">
-                    <div class="upload-block_text">
-                        Для загрузки скриншота, необходимо авторизироваться
-                    </div>
+    <header class="header">
+        <div class="header-wrapper">
+            <a href="#" class="logo-link">
+                <div class="logo-link_picture">
+                    <img src="Img/logo-picture.png" alt="">
                 </div>
-                <div class="screenshots-block">
-                    <div class="screenshots-block_title">Последние скриншоты</div>
-                    <div class="screenshots">
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                <div class="logo-link_text">
+                    LuxShot
+                </div>
+            </a>
+            <div class="login-button" id="header-login-button">Войти</div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main-wrapper">
+            <div class="upload-block">
+                <div class="upload-block_text">
+                    Для загрузки скриншота, необходимо авторизироваться
+                </div>
+            </div>
+            <div class="screenshots-block">
+                <div class="screenshots-block_title">Последние скриншоты</div>
+                <div class="screenshots">
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date">21.12.21</div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
-                        <div class="screenshot">
-                            <div class="screenshot-img-block">
-                                <img src="Img/default-picture.png" alt="" class="screenshot-img">
-                            </div>
-                            <div class="screenshot-date"></div>
+                        <div class="screenshot-date"></div>
+                    </div>
+                    <div class="screenshot">
+                        <div class="screenshot-img-block">
+                            <img src="Img/default-picture.png" alt="" class="screenshot-img">
                         </div>
+                        <div class="screenshot-date"></div>
                     </div>
                 </div>
             </div>
-        </main>
-        <footer class="footer">
-            <div class="wrapper footer-wrapper">
-                <div class="footer_email">Jokersli@mail.ru</div>
-                <a href="https://vk.com/praymium" class="footer_author">Николай Корноухов</a>
-            </div>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer_email">Jokersli@mail.ru</div>
+            <a href="https://vk.com/praymium" class="footer_author">Николай Корноухов</a>
+        </div>
+    </footer>
     <script src="preloader.js"></script>
     <script src="script.js"></script>
 </body>
